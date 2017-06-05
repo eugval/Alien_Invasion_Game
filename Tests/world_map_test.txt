@@ -1,0 +1,3 @@
+Hambu north=Hamba east=Hambi
+Hamba west=Hambu east=Hambi
+Hambi north=Hamba west=Hambu
