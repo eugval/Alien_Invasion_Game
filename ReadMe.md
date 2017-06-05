@@ -40,20 +40,3 @@ $ pip install -r Tests/Requirements.txt
 $ py.test -v
 
 ```
-
-
-Discussion
---------
-This exercise clearly feats the OOP style so I went with it. I split the program into
-three classes: (1) Game that encompasses the overall logic of the game and contains the
-aliens and the world, (2) World that contains the logic relevant to the cities and how
-they evolve and (3) Alien that contains the logic behind the aliens and defines their movement.
-
-The trickiest part of the exercise was to come up with the way and the data structures to correctly
-keep track of the cities and the positions of the aliens. Finally I decided that the full
-topology of the game's world would be encoded in the worldMap attribute and that the positions of
-the aliens would be stored in the alien objects themselves.
-
-The main assumptions that have been made are described above, and mainly concern the input parameters.
-
-This exercise was quite fun to do, I hope you like this solution! :)
