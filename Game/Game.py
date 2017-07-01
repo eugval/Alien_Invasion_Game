@@ -23,8 +23,11 @@ class Game:
     def createAliens(self,alienID):
         '''Create the aliens for the Game
 
-        Assume that the alien number is significantly smaller than the number of cities
+          If more aliens are input than cities, the number of aliens is made equal to the number of cities.
         '''
+
+        if(alienID>len(self.world.worldMap)):
+            alienID=len(self.world.worldMap)
 
         while alienID > 0 :
             city = self.world.randomCity()
@@ -66,9 +69,9 @@ class Game:
     def printResults(self):
         '''Print the results'''
 
-        if(os.path.isfile("results.txt")):
-            print("\n \n **********    Here are the Results:  ************ :D  \n")
-            with open("results.txt", 'r') as f:
+        if(os.path.isfile("Post_Apocalyptic_World_Map.txt")):
+            print("\n \n **********    Here is the post-apocalypse World:  ************ :O  \n")
+            with open("Post_Apocalyptic_World_Map.txt", 'r') as f:
                 print f.read()
         else:
             print("Please play First!")
@@ -77,7 +80,7 @@ class Game:
     def __writeResults(self):
         '''Write the results into a file'''
 
-        with open("results.txt","w") as f:
+        with open("Post_Apocalyptic_World_Map.txt","w") as f:
             for cityName, roads in self.world.worldMap.items():
                 f.write(cityName + ' ')
                 for direction, destination in roads:

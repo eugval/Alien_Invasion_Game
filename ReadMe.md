@@ -1,32 +1,47 @@
 Aliens Invasion Game
 ====================
+How it works
+------------
+A self-playing alien invasion simulation. \n
+It receives an input csv file representing a world and a number of aliens that are invading. \n
+The aliens are distributed and start moving randomly in the world. \n
+When they find each other they both die and destroy the city they got to. \n
+The game prints on each alien clash and the post-apocalyptic world that results at the end.
 
 
 How to play
 -----------
-
 1. Make sure python is installed
-2. Run the following command on the terminal:
+2. Generate the world. Type the following command on the terminal:
 ```
-$ python runAlienInvasion.py inputFile.txt Number_of_alliens
+$python CreateWorld.py number_of_cities
 
 ```
-InputFile.txt one of the provided game world files of the format world_map_*
+number_of_cities is the size of the world to be generated. Use an integer bigger than 4.
+
+3. Run the following command on the terminal:
+```
+$ python runAlienInvasion.py  World_Map.txt Number_of_alliens
+
+```
+World_Map.txt is the file containing the world map. This can be created by CreateWorld.py or be supplied independently if of the correct format.\n
 The Number_of_aliens is the number of aliens that compete.
 
 Assumptions
 -----------
 
-It is assumed that the Number_of_aliens is an integer, and that the inputFile.txt exits
- and is well formed.
+It is assumed that the Number_of_aliens is an integer, and that the World_Map.txt exits and is well formed.\n
 
-We further assume that Number_of_aliens is bigger than 0, that it is smaller than
-the number of cities in the input file and significantly smaller for a large number of cities in the input file.
-
-We finally assume that the cities in the inputFile.txt are unique and that the world
-that they represent is well formed i.e it makes up a simple connected graph.
+We further assume that Number_of_aliens is bigger than 0.\n
 
 
+How the code is structured
+--------------------------
+
+The Game package contains all the classes necessary to run the game while the Tests folder contains all the unit tests.
+The root folder contains the modules for the initial world creation and launching the game, as well as the world map and after-playing world map files.\n
+
+The object oriented paradigm has been used. There are three classes : (1) The Game class that represents the game overall, defines the action and game progression mechanisms (2) the World class that keeps track of the world as it being destroyed by the alien invasion and (3) the Alien class that defines the properties and movements of each Alien.
 
 To run the tests
 ---------------
