@@ -1,6 +1,6 @@
 Aliens Invasion Game
 ====================
-How it works
+What it is
 ------------
 - A self-playing alien invasion simulation.
 - It receives an input csv file representing a world and a number of aliens that are invading.
