@@ -1,6 +1,8 @@
 Aliens Invasion Game
 ====================
 
+Specs are found in /description.txt
+
 How to play
 -----------
 
