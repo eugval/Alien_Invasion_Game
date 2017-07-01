@@ -7,7 +7,7 @@ class World:
     Has a worldMap : CityName -> [(CityName, direction)] that lists all the cities
     and the cities with which they are connected.
     Can erase a city from the Map
-    Can return a ranom city
+    Can return a random city
     Can return connected cities to a certain city
     '''
 
